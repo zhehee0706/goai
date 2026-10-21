@@ -1,0 +1,14 @@
+{
+  "name": "go-ai",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node server/test.js",
+    "backup": "node server/backup.js",
+    "admin": "node server/admin.js"
+  }
+}

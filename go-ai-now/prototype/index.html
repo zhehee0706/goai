@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F6F5F1">
+<title>Go AI</title>
+<link rel="icon" href="img/seal.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Syne:wght@800&family=Archivo:wdth,wght@62..125,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Noto+Sans+SC:wght@400;700;900&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) { document.documentElement.classList.add("pre"); setTimeout(() => document.documentElement.classList.remove("pre"), 3000); }</script>
+</head>
+<body>
+
+<!-- ============ LANDING ============ -->
+<div id="landing" class="screen">
+  <header class="top wrap">
+    <a href="#/" class="brand" aria-label="Go AI home"><span class="logo" data-logo></span></a>
+    <nav class="top-nav" aria-label="Sections">
+      <a href="#story" data-t="nav.powers"></a>
+      <a href="#why" data-t="nav.why"></a>
+      <a href="#plans" data-t="nav.plans"></a>
+    </nav>
+    <span class="grow"></span>
+    <div class="lang-pills" role="group" aria-label="Language"><button data-setlang="en">EN</button><button data-setlang="zh">中文</button></div>
+    <a class="btn btn-dark btn-s app-btn" href="#/home"><span class="lg" data-t="nav.open"></span><span class="sm">App</span></a>
+  </header>
+
+  <main>
+  <section class="hero wrap">
+    <div class="hero-card">
+      <div class="chips">
+        <span class="chip"><i class="dot-live"></i><span data-t="hero.chip1"></span></span>
+        <span class="chip" data-t="hero.chip2"></span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow on-dark" data-t="hero.k"></p>
+        <h1 class="t-display-xl hero-h"><span class="ln"><span data-t="hero.l1"></span></span><span class="ln"><span data-t="hero.l2"></span></span><span class="ln"><span class="red" data-t="hero.l3"></span></span></h1>
+        <p class="t-lead hero-sub" data-t="hero.sub"></p>
+        <div class="hero-cta">
+          <a class="btn btn-seal" href="#/create" data-t="hero.cta"></a>
+          <a class="btn btn-ghost" href="#why" data-t="hero.cta2"></a>
+        </div>
+        <div class="yours">
+          <label for="shopname" data-t="yours.l"></label>
+          <div class="yours-row"><input id="shopname" data-in="shopname" data-ph="yours.ph" maxlength="28" autocomplete="off"><div class="who" role="group" data-tl="yours.type"><button data-m="cafe" data-t="m.cafe"></button><button data-m="pet" data-t="m.pet"></button></div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="compare" data-compare="hero"></div>
+        <p class="ready"><span data-t="hero.ready"></span><span class="ready-row" data-ready></span></p>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <div class="power-card" data-powercard></div>
+      <div class="wa-card" data-wademo></div>
+    </div>
+  </section>
+
+  <section class="wall wrap" aria-labelledby="wall-h">
+    <p class="eyebrow" data-t="wall.k"></p>
+    <h2 class="t-display" id="wall-h" data-t="wall.h"></h2>
+    <p class="t-lead muted" data-t="wall.s"></p>
+    <div class="wall-grid" data-wall></div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="st-text">
+      <ol class="st-dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+      <div class="step"><p class="eyebrow" data-t="p1.k"></p><h2 class="t-display" data-t="p1.h"></h2><p class="t-lead" data-t="p1.s"></p></div>
+      <div class="step"><p class="eyebrow" data-t="p2.k"></p><h2 class="t-display" data-t="p2.h"></h2><p class="t-lead" data-t="p2.s"></p></div>
+      <div class="step"><p class="eyebrow" data-t="p3.k"></p><h2 class="t-display" data-t="p3.h"></h2><p class="t-lead" data-t="p3.s"></p></div>
+      <div class="step"><p class="eyebrow" data-t="p4.k"></p><h2 class="t-display" data-t="p4.h"></h2><p class="t-lead" data-t="p4.s"></p></div>
+    </div>
+    <div class="st-stage" aria-hidden="true">
+      <div class="st-frame st-a">
+        <div class="st-clip"><img class="st-raw" alt=""><canvas class="st-poster"></canvas><i class="st-flash"></i></div>
+        <span class="tag tag-before" data-t="st.before"></span>
+        <span class="tag tag-after" data-t="st.after"></span>
+      </div>
+      <div class="st-phone st-b"><div class="sp-screen"><p class="sp-top"></p><div class="sp-tabs" data-sptabs></div><div class="st-strip"><canvas></canvas><canvas></canvas><canvas></canvas></div><span class="sp-btn" data-t="st.post"></span></div></div>
+      <div class="st-c">
+        <div class="pass st-card"><div class="pass-top"><p class="pass-name"></p><span class="pass-lv" data-t="demo"></span></div><p class="pass-rew"></p><div class="pstamps"></div></div>
+        <div class="voucher st-voucher"><b data-t="st.miss"></b><span class="v-off"></span></div>
+      </div>
+      <div class="st-report st-d">
+        <p class="eyebrow" data-t="st.month"></p>
+        <div class="mini-bars"></div>
+        <div class="rn-row"><div class="rn"><b data-n="photos">0</b><span data-t="stat.photos"></span></div><div class="rn"><b data-n="returns">0</b><span data-t="stat.returns"></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why wrap" id="why" aria-labelledby="why-h">
+    <p class="eyebrow" data-t="why.k"></p>
+    <h2 class="t-display" id="why-h" data-t="why.h"></h2>
+    <div class="why-table" data-why></div>
+  </section>
+
+  <section class="bigline" aria-label="1 minute, not 1 afternoon">
+    <p class="mover"><span data-t="big.line"></span><span class="seal-sep" data-seal="72"></span><span data-t="big.line"></span><span class="seal-sep" data-seal="72"></span></p>
+  </section>
+
+  <section class="plans wrap" id="plans" aria-labelledby="plans-h">
+    <p class="eyebrow" data-t="plans.k"></p>
+    <h2 class="t-display" id="plans-h" data-t="plans.h"></h2>
+    <div class="seg bill" role="group" data-billseg></div>
+    <div class="plan-grid" data-plans></div>
+    <div class="pb-wrap"><div class="payback" data-pb></div><div class="promise" data-promise></div></div>
+    <p class="fine" data-t="plans.note"></p>
+  </section>
+
+  <section class="wrap final-sec">
+    <a class="final" href="#/home">
+      <span class="final-seal" data-seal="72"></span>
+      <span><span class="t-display final-h" data-t="final.h"></span><span class="t-lead" data-t="final.s"></span></span>
+      <span class="round-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </section>
+  </main>
+  <footer class="wrap"><p class="fine foot" data-t="foot"></p></footer>
+</div>
+
+<!-- ============ OWNER APP ============ -->
+<div id="app" class="screen" hidden>
+  <header class="abar">
+    <a class="brand" href="#/home" aria-label="Go AI home"><span class="logo" data-logo></span></a>
+    <span class="grow"></span>
+    <button class="shop-pill" data-switch></button>
+    <span class="demo" data-t="demo"></span>
+    <div class="lang-pills" role="group" aria-label="Language"><button data-setlang="en">EN</button><button data-setlang="zh">中文</button></div>
+  </header>
+  <main id="view" class="view"></main>
+  <nav class="tabs" aria-label="Main">
+    <a href="#/home" data-tab="home"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/></svg><span data-t="tab.home"></span></a>
+    <a href="#/create" data-tab="create"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span data-t="tab.create"></span></a>
+    <a href="#/share" data-tab="share"><svg viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 18h2v2h-2zM14 18h2v2h-2zM18 14h2v2h-2z"/></svg><span data-t="tab.share"></span></a>
+    <a href="#/members" data-tab="members"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="8.5" cy="12" r="1.6"/><circle cx="13" cy="12" r="1.6"/><circle cx="17.5" cy="12" r="1.6"/></svg><span data-t="tab.members"></span></a>
+    <a href="#/report" data-tab="report"><svg viewBox="0 0 24 24"><path d="M5 20V10M10 20V4M15 20v-7M20 20v-4"/></svg><span data-t="tab.report"></span></a>
+  </nav>
+</div>
+
+<!-- ============ CUSTOMER (QR) + STAFF ============ -->
+<main id="cust" class="screen" hidden></main>
+<main id="staff" class="screen" hidden></main>
+
+<!-- power-up: the seal is carved, then stamped -->
+<div class="powerup" hidden aria-live="polite">
+  <div class="pu-inner">
+    <div class="pu-hero"><i class="pu-ring"></i><span class="pu-seal" data-seal="168"></span></div>
+    <p class="pu-pct"><b>0</b>%</p>
+    <div class="pu-bar"><i></i></div>
+    <p class="pu-step"></p>
+  </div>
+  <i class="pu-flash"></i>
+</div>
+
+<!-- level up -->
+<div class="levelup" hidden role="status" aria-live="polite">
+  <div class="lu-card"><i class="pu-ring lu-ring"></i><span class="lu-seal" data-seal="96"></span><p class="lu-k"></p><p class="t-h1 lu-h"></p><p class="lu-s"></p></div>
+</div>
+
+<div class="scrim" hidden></div>
+<div class="sheet" role="dialog" aria-modal="true" hidden></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

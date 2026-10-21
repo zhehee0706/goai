@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Go AI brand sheet</title>
+<link rel="icon" href="img/seal.svg">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Syne:wght@800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper: #F6F5F1; --card: #fff; --ink: #1A1714; --ink-3: #6E6862; --line: #E7E3DC; --night: #17120F; --seal: #D3271C; --seal-deep: #A81C13; --seal-soft: #FBE9E5; --blue: #2F6FB0; --jade: #157A61; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font: 400 16px/1.5 "Geist", "Noto Sans SC", system-ui, sans-serif; background: var(--paper); color: var(--ink); padding: 40px clamp(16px, 5vw, 64px) 80px; }
+  h1 { font-weight: 700; font-size: clamp(36px, 5vw, 60px); letter-spacing: -.045em; line-height: 1; margin-bottom: 8px; }
+  h2 { font-weight: 650; font-size: 22px; letter-spacing: -.02em; margin: 48px 0 16px; }
+  p.lead { color: var(--ink-3); max-width: 60ch; }
+  .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .tile { border-radius: 24px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); min-height: 200px; display: grid; place-items: center; padding: 28px; }
+  .tile.night { background: var(--night); color: #fff; box-shadow: none; }
+  .tile.red { background: var(--seal); color: #fff; box-shadow: none; }
+  .logo { display: inline-flex; align-items: center; gap: 12px; }
+  .wm { font-family: "Syne", Geist, sans-serif; font-weight: 800; letter-spacing: -.04em; line-height: 1; }
+  .lg .wm { font-size: 44px; } .md .wm { font-size: 26px; } .sm .wm { font-size: 18px; }
+  .sizes { display: flex; align-items: end; gap: 24px; }
+  .sizes small { display: block; text-align: center; color: var(--ink-3); font-size: 12px; margin-top: 6px; }
+  .plats { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+  .plats div { background: var(--card); border-radius: 20px; box-shadow: inset 0 0 0 1px var(--line); padding: 18px 10px; display: grid; justify-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+  .sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .sw div { border-radius: 18px; overflow: hidden; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); font-size: 13px; }
+  .sw i { display: block; height: 72px; }
+  .sw span { display: block; padding: 10px 12px; }
+  .note { margin-top: 12px; font-size: 13px; color: var(--ink-3); }
+</style>
+</head>
+<body>
+  <h1>Go AI</h1>
+  <p class="lead">The mark is a chop seal (印章), the sign a Malaysian shop puts on something it stands behind. G O / A I are carved in a 2×2 grid, one square for each of the four powers. Vermilion is used sparingly: the logo, the stamp moments, the one action that matters on a screen.</p>
+
+  <h2>Logo</h2>
+  <div class="row">
+    <div class="tile lg" id="l1"></div>
+    <div class="tile night lg" id="l2"></div>
+    <div class="tile red lg" id="l3"></div>
+  </div>
+  <p class="note">Wordmark: Syne ExtraBold, tracking −4%. Its wide letters match the square seal. Everything else is set in Geist.</p>
+
+  <h2>Seal on its own</h2>
+  <div class="tile"><div class="sizes" id="sizes"></div></div>
+
+  <h2>Platforms Go AI writes for</h2>
+  <div class="plats" id="plats"></div>
+  <p class="note">Platform marks belong to their owners and appear only to show where a post goes.</p>
+
+  <h2>Colour</h2>
+  <div class="sw">
+    <div><i style="background:#D3271C"></i><span><b>Seal</b> #D3271C</span></div>
+    <div><i style="background:#17120F"></i><span><b>Lacquer</b> #17120F</span></div>
+    <div><i style="background:#F6F5F1"></i><span><b>Paper</b> #F6F5F1</span></div>
+    <div><i style="background:#1A1714"></i><span><b>Ink</b> #1A1714</span></div>
+    <div><i style="background:#2F6FB0"></i><span><b>Ink blue</b> #2F6FB0 (charts)</span></div>
+    <div><i style="background:#157A61"></i><span><b>Jade</b> #157A61 (verified)</span></div>
+  </div>
+
+<script type="module">
+  import { seal, logo, plat, PLATS, PLAT_ORDER } from "./brand.js";
+  document.getElementById("l1").innerHTML = logo(56);
+  document.getElementById("l2").innerHTML = logo(56);
+  document.getElementById("l3").innerHTML = `<span class="logo">${seal(56, { color: "#fff", ink: "#D3271C" })}<span class="wm">Go AI</span></span>`;
+  document.getElementById("sizes").innerHTML = [128, 64, 40, 24, 16].map((s) => `<div>${seal(s)}<small>${s}px</small></div>`).join("");
+  document.getElementById("plats").innerHTML = PLAT_ORDER.map((id) => `<div>${plat(id, 52)}${PLATS[id].name[0]}</div>`).join("");
+</script>
+</body>
+</html>
