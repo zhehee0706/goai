@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Go AI</title>
+<meta name="description" content="Superpower your shop: AI posters, AI captions for 8 apps, a membership system and a monthly report. Built for Malaysian shops.">
+<meta property="og:title" content="Go AI: one photo, every platform, real customers">
+<meta property="og:description" content="Posters for every platform, customer posts, stamps and a report that shows what members spent. For cafés, restaurants, salons, bakeries and more.">
+<meta property="og:image" content="img/matcha-magic.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/seal.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/seal.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..700&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Caveat:wght@700&family=Syne:wght@800&family=Archivo:wdth,wght@62..125,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Noto+Sans+SC:wght@400;700;900&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<script src="pre.js"></script>
+</head>
+<body>
+
+<!-- ============ LANDING ============ -->
+<div id="landing" class="screen">
+  <header class="top wrap">
+    <a href="#/" class="brand" aria-label="Go AI home"><span class="logo" data-logo></span></a>
+    <nav class="top-nav" aria-label="Sections">
+      <a href="#how" data-t="nav.powers"></a>
+      <a href="#why" data-t="nav.why"></a>
+      <a href="#plans" data-t="nav.plans"></a>
+    </nav>
+    <span class="grow"></span>
+    <div class="lang-pills" role="group" aria-label="Language"><button data-setlang="en">EN</button><button data-setlang="zh">中文</button></div>
+    <a class="btn btn-dark btn-s app-btn" href="#/home"><span class="lg" data-t="nav.open"></span><span class="sm">App</span></a>
+  </header>
+
+  <main>
+  <section class="hero wrap">
+    <div class="sign">
+      <i class="screw sw-tl"></i><i class="screw sw-tr"></i><i class="screw sw-bl"></i><i class="screw sw-br"></i>
+      <div class="sign-copy">
+        <h1 class="sign-h"><span class="sb-big" data-hero="big"></span><span class="sb-small" data-hero="small"></span></h1>
+        <ul class="powers" data-powers></ul>
+        <div class="sign-plats" data-signplats></div>
+        <div class="hero-cta">
+          <a class="btn btn-seal" href="#/signup" data-t="hero.cta"></a>
+          <a class="btn btn-sign" href="#how" data-t="hero.cta2"></a>
+        </div>
+      </div>
+      <figure class="source" aria-hidden="true"><img alt=""><span class="src-seal" data-seal="56"></span></figure>
+    </div>
+    <div class="window" data-window aria-hidden="true"></div>
+    <div class="yours">
+      <label for="shopname" data-t="yours.l"></label>
+      <div class="yours-row"><input id="shopname" data-in="shopname" data-ph="yours.ph" maxlength="28" autocomplete="off"><select class="type-sel" data-in="shoptype" data-tl="yours.type"></select></div>
+    </div>
+  </section>
+
+  <section class="how wrap" id="how" aria-labelledby="how-h">
+    <h2 class="t-display" id="how-h" data-t="how.h"></h2>
+    <ol class="steps">
+      <li><div class="step-vis" aria-hidden="true"><canvas class="sv-poster" width="432" height="540"></canvas></div><h3 data-t="p1.h"></h3><p data-t="p1.s"></p></li>
+      <li><div class="step-vis" aria-hidden="true"><div class="sv-phone"><canvas width="432" height="768"></canvas><div class="sv-marks" data-svmarks></div></div></div><h3 data-t="p2.h"></h3><p data-t="p2.s"></p></li>
+      <li><div class="step-vis" aria-hidden="true"><div class="sv-card"><div class="pass sv-pass"><div class="pass-top"><p class="pass-name"></p></div><p class="pass-rew"></p><div class="pstamps"></div></div><div class="voucher"><b data-t="st.miss"></b><span class="v-off"></span></div></div></div><h3 data-t="p3.h"></h3><p data-t="p3.s"></p></li>
+      <li><div class="step-vis" aria-hidden="true"><div class="sv-report"><p class="sv-month" data-t="st.month"></p><div class="mini-bars"></div><div class="rn-row"><div class="rn"><b>210</b><span data-t="stat.photos"></span></div><div class="rn"><b>126</b><span data-t="stat.returns"></span></div></div></div></div><h3 data-t="p4.h"></h3><p data-t="p4.s"></p></li>
+    </ol>
+  </section>
+
+  <section class="why wrap" id="why" aria-labelledby="why-h">
+    <h2 class="t-display" id="why-h" data-t="why.h"></h2>
+    <div class="why-table" data-why></div>
+  </section>
+
+  <section class="plans wrap" id="plans" aria-labelledby="plans-h">
+    <h2 class="t-display" id="plans-h" data-t="plans.h"></h2>
+    <div class="seg bill" role="group" data-billseg></div>
+    <div class="plan-grid" data-plans></div>
+    <div class="pb-wrap"><div class="payback" data-pb></div><div class="promise" data-promise></div></div>
+    <p class="fine" data-t="plans.note"></p>
+  </section>
+
+  <section class="wrap final-sec">
+    <a class="final" href="#/signup">
+      <span class="final-seal" data-seal="72"></span>
+      <span><span class="t-display final-h" data-t="final.h"></span><span class="t-lead" data-t="final.s"></span></span>
+      <span class="round-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </section>
+  </main>
+  <footer class="wrap"><p class="fine foot" data-t="foot"></p></footer>
+</div>
+
+<!-- ============ OWNER APP ============ -->
+<div id="app" class="screen" hidden>
+  <header class="abar">
+    <a class="brand" href="#/home" aria-label="Go AI home"><span class="logo" data-logo></span></a>
+    <span class="grow"></span>
+    <a class="shop-pill" href="#/settings" data-shopname></a>
+    <div class="lang-pills" role="group" aria-label="Language"><button data-setlang="en">EN</button><button data-setlang="zh">中文</button></div>
+  </header>
+  <main id="view" class="view"></main>
+  <nav class="tabs" aria-label="Main">
+    <a href="#/home" data-tab="home"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/></svg><span data-t="tab.home"></span></a>
+    <a href="#/create" data-tab="create"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span data-t="tab.create"></span></a>
+    <a href="#/share" data-tab="share"><svg viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 18h2v2h-2zM14 18h2v2h-2zM18 14h2v2h-2z"/></svg><span data-t="tab.share"></span></a>
+    <a href="#/members" data-tab="members"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="8.5" cy="12" r="1.6"/><circle cx="13" cy="12" r="1.6"/><circle cx="17.5" cy="12" r="1.6"/></svg><span data-t="tab.members"></span></a>
+    <a href="#/report" data-tab="report"><svg viewBox="0 0 24 24"><path d="M5 20V10M10 20V4M15 20v-7M20 20v-4"/></svg><span data-t="tab.report"></span></a>
+  </nav>
+</div>
+
+<!-- ============ CUSTOMER (QR) + STAFF ============ -->
+<main id="cust" class="screen" hidden></main>
+<main id="staff" class="screen" hidden></main>
+<main id="auth" class="screen" hidden></main>
+
+<!-- power-up: the seal is carved, then stamped -->
+<div class="powerup" hidden aria-live="polite">
+  <div class="pu-inner">
+    <div class="pu-hero"><i class="pu-ring"></i><span class="pu-seal" data-seal="168"></span></div>
+    <p class="pu-pct"><b>0</b>%</p>
+    <div class="pu-bar"><i></i></div>
+    <p class="pu-step"></p>
+  </div>
+  <i class="pu-flash"></i>
+</div>
+
+<div class="scrim" hidden></div>
+<div class="sheet" role="dialog" aria-modal="true" hidden></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
